@@ -258,3 +258,25 @@ button, .btn {
 .text-muted { color: var(--text-muted); }
 .bg-card { background: var(--bg-card); }
 .border-subtle { border-color: var(--border-subtle); }
+
+/* ---- Fix: don't underline nav + button-links ---- */
+
+/* Buttons are anchors in your HTML, so remove underline there */
+a.btn,
+a.btn:hover {
+  text-decoration: none;
+}
+
+/* Nav links: keep clean; underline only for active state if you want */
+nav a,
+nav a:hover {
+  text-decoration: none;
+}
+
+/* Optional: keep a subtle active indicator in nav */
+nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
