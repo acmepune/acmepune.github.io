@@ -1,0 +1,260 @@
+/* =========================================================
+   ACME(R) Minimal Design System Tokens
+   Purpose: publisher-grade polish without refactor
+   Drop-in file: include AFTER existing CSS
+   ========================================================= */
+
+:root {
+  /* -------------------------
+     Color tokens (WCAG-safe)
+     ------------------------- */
+  --bg-page: #FFFFFF;
+  --bg-card: #F5F6F9;
+
+  --text-heading: #0F1828;    /* near-black */
+  --text-body: #3F4C5E;       /* tightened for near-AAA/AAA on light cards */
+  --text-muted: #6B7280;
+
+  --border-subtle: #E5E7EB;
+
+  --accent-blue: #0B4FE6;     /* links, focus, primary CTA */
+  --accent-blue-hover: #083BC9;
+  --accent-blue-soft: #E8F0FF; /* soft fill for hover states if needed */
+
+  /* -------------------------
+     Typography tokens
+     ------------------------- */
+  --font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --fs-h1: 42px;
+  --fs-h1-mobile: 32px;
+  --lh-h1: 1.10;
+
+  --fs-h2: 26px;
+  --lh-h2: 1.20;
+
+  --fs-h3: 18px;
+  --lh-h3: 1.25;
+
+  --fs-body: 16.5px;
+  --lh-body: 1.65;
+
+  --fs-small: 13.5px;
+  --lh-small: 1.40;
+
+  --measure-body: 72ch;
+
+  /* -------------------------
+     Spacing scale (use these)
+     ------------------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* -------------------------
+     Radius / borders
+     ------------------------- */
+  --radius-card: 10px;
+  --radius-btn: 10px;
+  --border-1: 1px;
+  --border-2: 2px;
+
+  /* -------------------------
+     Buttons
+     ------------------------- */
+  --btn-primary-bg: var(--accent-blue);
+  --btn-primary-text: #FFFFFF;
+
+  --btn-secondary-bg: #E9EBEF;
+  --btn-secondary-text: var(--text-heading);
+
+  --btn-height: 44px; /* minimum tap target */
+  --btn-pad-x: 16px;
+
+  /* -------------------------
+     Focus (accessibility)
+     ------------------------- */
+  --focus-ring: 3px solid var(--accent-blue);
+  --focus-offset: 2px;
+}
+
+/* =========================================================
+   Global base (safe overrides)
+   ========================================================= */
+
+html, body {
+  background: var(--bg-page);
+  color: var(--text-body);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+/* Headings: disciplined hierarchy */
+h1, .h1 {
+  color: var(--text-heading);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  letter-spacing: -0.02em;
+}
+
+h2, .h2 {
+  color: var(--text-heading);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  letter-spacing: -0.01em;
+}
+
+h3, .h3 {
+  color: var(--text-heading);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+}
+
+small, .small, .meta {
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+  color: var(--text-muted);
+}
+
+/* Comfortable line length for paragraphs/content blocks */
+p, .prose {
+  max-width: var(--measure-body);
+}
+
+/* Mobile H1 */
+@media (max-width: 640px) {
+  h1, .h1 { font-size: var(--fs-h1-mobile); }
+}
+
+/* =========================================================
+   Links (publisher standard)
+   ========================================================= */
+
+a {
+  color: var(--accent-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  color: var(--accent-blue-hover);
+}
+
+/* Optional visited state (very subtle). Uncomment if desired. */
+/*
+a:visited {
+  color: #1F4FD6;
+}
+*/
+
+/* =========================================================
+   Focus visibility (non-negotiable)
+   ========================================================= */
+
+:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+/* If your CSS resets outlines, keep this to restore usability */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* =========================================================
+   Cards (border-forward, minimal shadow)
+   ========================================================= */
+
+.card, .panel, .tile {
+  background: var(--bg-card);
+  border: var(--border-1) solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  box-shadow: none;
+}
+
+/* Hover polish (subtle) */
+.card:hover, .panel:hover, .tile:hover {
+  border-color: #CBD5E1;
+}
+
+/* =========================================================
+   Buttons (hierarchy)
+   Expectation: your markup already has classes;
+   map these classnames to whatever you currently use.
+   ========================================================= */
+
+button, .btn {
+  min-height: var(--btn-height);
+  padding: 0 var(--btn-pad-x);
+  border-radius: var(--radius-btn);
+  border: var(--border-1) solid transparent;
+  font: inherit;
+  line-height: 1;
+}
+
+/* Primary */
+.btn-primary, button.primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+}
+
+.btn-primary:hover, button.primary:hover {
+  background: var(--accent-blue-hover);
+}
+
+/* Secondary */
+.btn-secondary, button.secondary {
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border-color: var(--border-subtle);
+}
+
+.btn-secondary:hover, button.secondary:hover {
+  background: #DDE1E7;
+}
+
+/* Tertiary (text-button) */
+.btn-tertiary, button.tertiary {
+  background: transparent;
+  color: var(--accent-blue);
+  border-color: transparent;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.btn-tertiary:hover, button.tertiary:hover {
+  color: var(--accent-blue-hover);
+}
+
+/* =========================================================
+   Header / masthead separation (publisher feel)
+   Add class .site-header to your header if not present.
+   ========================================================= */
+
+.site-header {
+  background: var(--bg-page);
+  border-bottom: var(--border-1) solid var(--border-subtle);
+}
+
+/* Active nav indicator: underline (avoid color-only) */
+.nav a[aria-current="page"],
+.nav a.active {
+  text-decoration-thickness: 2px;
+}
+
+/* =========================================================
+   Utility tokens (optional)
+   ========================================================= */
+
+.text-heading { color: var(--text-heading); }
+.text-body { color: var(--text-body); }
+.text-muted { color: var(--text-muted); }
+.bg-card { background: var(--bg-card); }
+.border-subtle { border-color: var(--border-subtle); }
