@@ -1,0 +1,147 @@
+<!-- ===================== index.html ===================== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ACMER — Academy of Continuing Medical Education & Research</title>
+  <meta name="description" content="The Academy of Continuing Medical Education & Research (ACMER), Pune, India — a non-profit academic organization supporting CME and clinically grounded research in metabolic and lifestyle diseases." />
+  <link rel="canonical" href="https://acmer.in/" />
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#101828; --muted:#475467; --line:#EAECF0;
+      --brand:#0B5FFF; --soft:#F2F4F7; --card:#FFFFFF; --shadow: 0 6px 18px rgba(16,24,40,.06);
+      --radius:14px;
+      --max: 980px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.55}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{border-bottom:1px solid var(--line);background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(8px);position:sticky;top:0;z-index:10}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+    .bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:10px}
+    .mark{width:34px;height:34px;border-radius:10px;background:var(--soft);display:grid;place-items:center;border:1px solid var(--line)}
+    .mark span{font-weight:800;color:#344054}
+    .titleblock{display:flex;flex-direction:column}
+    .org{font-weight:800;letter-spacing:.2px}
+    .loc{color:var(--muted);font-size:13px;margin-top:2px}
+    nav{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+    nav a{font-size:14px;color:#344054;padding:8px 10px;border-radius:10px}
+    nav a[aria-current="page"]{background:var(--soft);border:1px solid var(--line);color:#111827}
+    main{padding:28px 0 18px}
+    .hero{display:grid;grid-template-columns: 1.2fr .8fr;gap:18px;align-items:stretch}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .pad{padding:18px}
+    h1{font-size:28px;line-height:1.2;margin:0 0 10px}
+    p{margin:0 0 12px;color:var(--muted)}
+    .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:#344054;background:var(--soft);border:1px solid var(--line);padding:6px 10px;border-radius:999px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+    .mini h3{font-size:15px;margin:0 0 6px}
+    .mini p{font-size:14px;margin:0;color:var(--muted)}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--soft);color:#111827;font-weight:600;font-size:14px}
+    .btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+    footer{border-top:1px solid var(--line);padding:18px 0 28px;color:var(--muted);font-size:13px}
+    .foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    @media (max-width: 860px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      nav{justify-content:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <div class="bar">
+      <div class="logo">
+        <div class="mark" aria-hidden="true"><span>A</span></div>
+        <div class="titleblock">
+          <div class="org">ACMER</div>
+          <div class="loc">Pune, Maharashtra, India</div>
+        </div>
+      </div>
+      <nav aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="governance.html">Governance</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <section class="card pad">
+        <div class="kicker">Non-profit academic organization</div>
+        <h1>Academy of Continuing Medical Education &amp; Research (ACMER)</h1>
+        <p>
+          ACMER is an independent, non-profit academic organization based in Pune, India, dedicated to
+          continuing medical education and clinically grounded research, with a focus on metabolic health,
+          obesity, diabetes, and cardiometabolic risk.
+        </p>
+        <p>
+          The Academy supports clinician-led research, methodological innovation, and responsible academic
+          publishing, fostering collaboration between practicing physicians and academic platforms.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="about.html">Institutional profile</a>
+          <a class="btn" href="research.html">Research focus</a>
+          <a class="btn" href="contact.html">Contact ACMER</a>
+        </div>
+      </section>
+
+      <aside class="card pad" aria-label="Institutional summary">
+        <h2 style="margin:0 0 8px;font-size:18px;">At a glance</h2>
+        <p style="margin:0 0 10px;">
+          <strong>Legal name:</strong> The Academy of Continuing Medical Education &amp; Research<br />
+          <strong>Abbreviation:</strong> ACMER<br />
+          <strong>Location:</strong> Pune, India<br />
+          <strong>Email:</strong> <a href="mailto:info@acmer.in">info@acmer.in</a><br />
+          <strong>Website:</strong> <a href="https://acmer.in/">https://acmer.in</a>
+        </p>
+        <p style="margin:0;color:var(--muted);font-size:14px;">
+          This website provides the Academy’s official institutional profile for academic correspondence,
+          publisher workflows, and identifier registries.
+        </p>
+      </aside>
+    </div>
+
+    <section class="grid" aria-label="Core activities">
+      <div class="card pad mini">
+        <h3>Continuing Medical Education</h3>
+        <p>Structured CME and knowledge dissemination aligned with evidence-based clinical practice.</p>
+      </div>
+      <div class="card pad mini">
+        <h3>Clinical &amp; Translational Research</h3>
+        <p>Clinician-led studies and methodological frameworks in metabolic and lifestyle diseases.</p>
+      </div>
+      <div class="card pad mini">
+        <h3>Publication-Ready Outputs</h3>
+        <p>Scientific writing, data-driven interpretation, and publishing-aligned communication.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>© <span id="y"></span> ACMER — Academy of Continuing Medical Education &amp; Research</div>
+      <div><a href="contact.html">info@acmer.in</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
