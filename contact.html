@@ -1,0 +1,112 @@
+<!-- ===================== contact.html ===================== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — ACMER</title>
+  <meta name="description" content="Contact ACMER, Pune, India. Official institutional email and address for academic correspondence and verification." />
+  <link rel="canonical" href="https://acmer.in/contact.html" />
+  <style>
+    :root{--bg:#fff;--ink:#101828;--muted:#475467;--line:#EAECF0;--brand:#0B5FFF;--soft:#F2F4F7;--shadow:0 6px 18px rgba(16,24,40,.06);--radius:14px;--max:980px;--font:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.55}
+    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+    header{border-bottom:1px solid var(--line);background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(8px);position:sticky;top:0;z-index:10}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+    .bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:10px}
+    .mark{width:34px;height:34px;border-radius:10px;background:var(--soft);display:grid;place-items:center;border:1px solid var(--line)}
+    .mark span{font-weight:800;color:#344054}
+    .titleblock{display:flex;flex-direction:column}
+    .org{font-weight:800;letter-spacing:.2px}
+    .loc{color:var(--muted);font-size:13px;margin-top:2px}
+    nav{display:flex;gap:12px;flex-wrap:wrap}
+    nav a{font-size:14px;color:#344054;padding:8px 10px;border-radius:10px}
+    nav a[aria-current="page"]{background:var(--soft);border:1px solid var(--line);color:#111827}
+    main{padding:26px 0 18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .pad{padding:18px}
+    h1{font-size:24px;margin:0 0 10px}
+    p{margin:0 0 12px;color:var(--muted)}
+    .info{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:14px}
+    .row{display:grid;grid-template-columns: 180px 1fr;gap:10px;margin:10px 0}
+    .k{font-weight:700;color:#344054;font-size:13px}
+    .v{color:var(--muted);font-size:14px}
+    footer{border-top:1px solid var(--line);padding:18px 0 28px;color:var(--muted);font-size:13px}
+    .foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    @media (max-width:700px){.row{grid-template-columns:1fr}}
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <div class="bar">
+      <div class="logo">
+        <div class="mark" aria-hidden="true"><span>A</span></div>
+        <div class="titleblock">
+          <div class="org">ACMER</div>
+          <div class="loc">Pune, Maharashtra, India</div>
+        </div>
+      </div>
+      <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="governance.html">Governance</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="card pad">
+      <h1>Contact</h1>
+      <p>
+        For academic correspondence, institutional verification, affiliation queries, or publication-related contact,
+        please use the official address below.
+      </p>
+
+      <div class="info" role="group" aria-label="Official contact details">
+        <div class="row">
+          <div class="k">Organization</div>
+          <div class="v">The Academy of Continuing Medical Education &amp; Research (ACMER)</div>
+        </div>
+        <div class="row">
+          <div class="k">Email</div>
+          <div class="v"><a href="mailto:info@acmer.in">info@acmer.in</a></div>
+        </div>
+        <div class="row">
+          <div class="k">Website</div>
+          <div class="v"><a href="https://acmer.in/">https://acmer.in</a></div>
+        </div>
+        <div class="row">
+          <div class="k">Postal address</div>
+          <div class="v">
+            Shinde Clinic, Krishna Chambers, Swargate,<br />
+            Pune–Satara Road, Pune 411037, India
+          </div>
+        </div>
+        <div class="row">
+          <div class="k">City / Country</div>
+          <div class="v">Pune, Maharashtra, India</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>© <span id="y"></span> ACMER</div>
+      <div><a href="mailto:info@acmer.in">info@acmer.in</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
