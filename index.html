@@ -55,6 +55,47 @@
 </head>
 
 <body>
+  <!-- ACMER NAVBAR (start) -->
+<style>
+  .acmer-nav {
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 14px 18px; border-bottom: 1px solid #e5e5e5;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  .acmer-brand {
+    text-decoration:none; color:#111; font-weight:800; font-size:18px;
+    letter-spacing:0.2px;
+  }
+  .acmer-brand span { font-weight:600; color:#444; }
+  .acmer-menu { display:flex; gap:14px; flex-wrap:wrap; }
+  .acmer-link {
+    text-decoration:none; color:#222; font-weight:600; font-size:14px;
+    padding:8px 10px; border-radius:10px;
+  }
+  .acmer-link:hover { background:#f4f4f4; }
+  .acmer-link.active { background:#111; color:#fff; }
+  .acmer-wrap { max-width: 1100px; margin: 0 auto; }
+  @media (max-width: 640px){
+    .acmer-nav { flex-direction:column; align-items:flex-start; gap:10px; }
+    .acmer-menu { gap:8px; }
+  }
+</style>
+
+<header class="acmer-nav">
+  <div class="acmer-wrap" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:14px;">
+    <a class="acmer-brand" href="index.html">ACME&amp;R <span>• Pune</span></a>
+
+    <nav class="acmer-menu" aria-label="Primary">
+      <a class="acmer-link active" href="index.html">Home</a>
+      <a class="acmer-link" href="about.html">About</a>
+      <a class="acmer-link" href="research.html">Research</a>
+      <a class="acmer-link" href="governance.html">Governance</a>
+      <a class="acmer-link" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ACMER NAVBAR (end) -->
+
 <header>
   <div class="wrap">
     <div class="bar">
