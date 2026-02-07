@@ -280,3 +280,71 @@ nav a[aria-current="page"] {
   text-decoration-thickness: 2px;
 }
 
+/* =========================================================
+   ACMER FINAL POLISH PATCH
+   Fixes:
+   1) Nav active-state consistency
+   2) Removes underline from nav + buttons
+   3) Ensures calm body text everywhere
+   ========================================================= */
+
+/* ---- Global link rules (publisher standard) ---- */
+a {
+  color: var(--accent-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  color: var(--accent-blue-hover);
+}
+
+/* ---- Buttons are links: never underline ---- */
+a.btn,
+a.btn:hover {
+  text-decoration: none;
+}
+
+/* ---- Navigation: clean, consistent, deterministic ---- */
+nav a {
+  color: #344054;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+/* Active page indicator (pill style, journal-safe) */
+nav a[aria-current="page"] {
+  background: #E9EBEF;
+  border: 1px solid var(--border-subtle);
+  color: #111827;
+  text-decoration: none;
+}
+
+/* ---- Typography tone correction ---- */
+/* Calm body text everywhere, not just <p> */
+main,
+section,
+article,
+td,
+th,
+li,
+dd,
+dt {
+  color: var(--text-body);
+}
+
+/* Headings & emphasis remain strong */
+h1,
+h2,
+h3,
+h4,
+strong {
+  color: var(--text-heading);
+}
+
